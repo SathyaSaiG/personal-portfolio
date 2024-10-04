@@ -30,7 +30,7 @@ h2{
     width: 100%;
     padding: 35px 5%;
     background: black;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,6 +49,10 @@ h2{
     text-shadow: 0 0 25px rgb(169, 82, 255),
                  0 0 50px rgb(156, 69, 255);
     transform: scale(1.1);
+}
+
+.navbar {
+    display: flex;
 }
 
 .navbar a{
@@ -70,6 +74,17 @@ h2{
     color: rgb(120, 20, 220);
 }
 
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+}
+
 #home{
     width: 100%;
     min-height: 100vh;
@@ -81,6 +96,7 @@ h2{
 }
 
 .home-content{
+    flex: 1;
     max-width: 800px;
 }
 
@@ -98,6 +114,11 @@ h2{
     margin: 25px 0 30px;
 }
 
+.img-box {
+    flex: 1;
+    text-align: center;
+}
+
 .img-box img{
     border-radius: 50%;
     width: 400px;
@@ -113,7 +134,7 @@ h2{
 
 ::-webkit-scrollbar-track{
     background-color:black;
-    width: 50px;
+    /* width: 50px; */
 }
 
 .social-icons a{
@@ -121,7 +142,6 @@ h2{
     font-size: 24px;
     /* padding-bottom: 25px; */
     color: rgb(120, 20, 220);
-    border: 2px solid rgb(120, 20, 220);
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -146,6 +166,7 @@ h2{
     font-size: 42px;
     color: rgb(120, 20, 220);
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .skills-content, .projects-content{
@@ -158,6 +179,7 @@ h2{
 
 .frontend, .backend {
     flex: 1; /* Both sections take up equal width *//*and Allow these sections to grow and shrink */
+    min-width: 250px;
     background-color: rgb(230, 230, 250);
     padding: 20px;
     border-radius: 5px;
@@ -168,24 +190,26 @@ h2{
 
 .project{
     flex: 1;
+    min-width: 250px;
     background-color: rgb(230, 230, 250);
     border-radius: 5px;
 }
 
 .project img{
-    /* transition: 1s;
-    cursor: pointer; */
     /* margin-bottom: 0.5rem; */
-    margin: 20px;
-    box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+    max-width: 100%;
+    
     /* overflow: hidden; */
     border-radius: 0.2rem;
     width: 330px;
     height: 175px;
+    object-fit: cover;
 }
 
 .project-img{
+    margin: 20px;
     text-align: center;
+    overflow: hidden;
 }
 
 .project h4, .project p, .project-btns{
@@ -235,6 +259,7 @@ h2{
     background-color: rgb(230, 230, 250);
     padding: 20px;
     border-radius: 5px;
+    min-width: 250px;
 }
 
 .exp span{
@@ -258,6 +283,7 @@ ul{
     border-radius: 5px;
     padding: 20px;
     width: 29%;
+    min-width: 250px;
     margin: 0 auto;
     justify-content: center;
     text-align: left;
@@ -270,7 +296,7 @@ ul{
 }
 
 .connect-content{
-    padding: 5% 0 23.5%;
+    padding: 5% 0 20%;
 }
 
 .connect-content h4{
@@ -316,7 +342,7 @@ ul{
     position: relative; 
     width: 100%;
     background: black;
-    
+    min-width: 250px;
     padding: 40px 0;
     /* bottom: 0; */
 }
@@ -325,4 +351,77 @@ ul{
     color: white;
     text-align: center;
     margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: black;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-150%);
+        transition: 0.3s ease;
+    }
+
+    .menu-toggle:checked ~ .navbar {
+        transform: translateY(0);
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .home-content h3 {
+        font-size: 28px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .img-box {
+        order: -1;
+        margin-top: 0;
+    }
+
+    .img-box img {
+        max-width: 250px;
+    }
+
+    .frontend, .backend, .project {
+        flex-basis: 100%;
+    }
+
+    .project-img img{
+        /* max-width: 230px; */
+        width: auto;
+        height: auto;
+    }
+
+    .project-btns a{
+        margin-bottom: 10px;
+    }
+
+    .edu {
+        margin: 0;
+        width: auto;
+    }
 }
