@@ -29,8 +29,8 @@ The objective of this project was to build a portfolio website using **HTML** an
 2. **Styling Other Sections**:  
    Selecting and applying CSS to sections that were not covered in the original design, such as **Skills** and **Projects**.
 
-3. **Choosing the Right Colors**:  
-   I experimented with various color combinations before finalizing the design scheme for the website.
+3. **Color Scheme**:  
+   It took multiple trials to settle on a color scheme that worked well across all sections of the website.
 
 ## Solutions
 1. **Design Consistency**:  
@@ -39,8 +39,8 @@ The objective of this project was to build a portfolio website using **HTML** an
 2. **Reference Materials**:  
    I used additional **YouTube videos**, **GitHub repositories**, and **ChatGPT** to help finalize the design for each section. This combination of resources, along with my own creativity, helped me design the other sections.
    
-3. **Color Palette**:  
-   Through trial and error, I was able to find a color palette that worked well for the design.
+3. **Finalizing Colors**:  
+   After numerous trials, I settled on a cohesive color scheme that complemented the overall design.
 
 ## Learning Outcomes
 1. **Portfolio Website Development**:  
